@@ -61,8 +61,9 @@ preferences {
 		
 		section("More options", refreshAfterSelection:true) {
 			href "timeIntervalInput", title: "Only during a certain time", description: timeLabel ?: "Tap to set", state: timeLabel ? "complete" : "incomplete", refreshAfterSelection:true
-            input "days", "enum", title: "Only on certain days of the week", multiple: true, required: false,
+            	input "days", "enum", title: "Only on certain days of the week", multiple: true, required: false,
 				options: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+		input "modes", "mode", title: "Set for specific mode(s)", multiple: true, required: false
 		}
         
         if (harmony != null)
